@@ -149,6 +149,24 @@
   .skill-col li{font-size:13.5px; color:var(--text-mid); padding-left:14px; position:relative;}
   .skill-col li::before{content:'›'; position:absolute; left:0; color:var(--text-low);}
 
+  /* CERTIFICATIONS */
+  .cert-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:16px;}
+  .cert-card{
+    background:var(--bg-panel); border:1px solid var(--line); border-radius:8px; padding:18px;
+    display:flex; flex-direction:column; gap:10px; transition:border-color .2s, transform .2s;
+  }
+  .cert-card:hover{border-color:var(--cyan); transform:translateY(-2px);}
+  .cert-issuer{
+    font-family:var(--mono); font-size:10px; font-weight:700; letter-spacing:.05em;
+    text-transform:uppercase; padding:4px 9px; border-radius:20px; width:fit-content;
+  }
+  .cert-issuer.aws{background:rgba(255,153,0,0.12); color:#ff9900;}
+  .cert-issuer.fortinet{background:rgba(238,44,45,0.12); color:#ee2c2d;}
+  .cert-issuer.datadog{background:rgba(99,44,166,0.15); color:#a855f7;}
+  .cert-issuer.cisco{background:rgba(0,187,222,0.12); color:#00bbde;}
+  .cert-card h3{font-size:14px; color:var(--text-hi); font-weight:600; line-height:1.35;}
+  .cert-meta{font-family:var(--mono); font-size:11px; color:var(--text-low);}
+
   /* PROJECTS */
   .proj-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:20px;}
   .proj-card{
@@ -184,6 +202,7 @@
     .hero-grid{grid-template-columns:1fr;}
     .about-grid{grid-template-columns:1fr;}
     .skill-cols{grid-template-columns:1fr 1fr;}
+    .cert-grid{grid-template-columns:1fr 1fr;}
     .proj-grid{grid-template-columns:1fr;}
     .biz-panel{grid-template-columns:1fr;}
     .nav-links{display:none;}
@@ -191,6 +210,7 @@
   }
   @media (max-width:520px){
     .skill-cols{grid-template-columns:1fr;}
+    .cert-grid{grid-template-columns:1fr;}
     .wrap{padding:0 20px;}
   }
   @media (prefers-reduced-motion:reduce){
@@ -202,12 +222,13 @@
 
 <header class="nav">
   <div class="nav-inner">
-    <div class="logo">EARL<span>.</span>ONIPA</div>
+    <div class="logo">EARL ONIPA</div>
     <nav class="nav-links">
       <a href="#about">about</a>
       <a href="#experience">experience</a>
       <a href="#skills">skills</a>
       <a href="#projects">projects</a>
+      <a href="#certifications">certifications</a>
       <a href="#business">business</a>
       <a href="#contact">contact</a>
     </nav>
@@ -378,6 +399,71 @@
       </div>
     </div>
   </section>
+
+  <!-- CERTIFICATIONS -->
+  <section id="certifications">
+    <div class="kicker">05 — Certifications</div>
+    <h2>Verified credentials.</h2>
+    <div class="cert-grid">
+      <div class="cert-card">
+        <span class="cert-issuer aws">AWS</span>
+        <h3>AWS Certified Solutions Architect – Associate</h3>
+        <p class="cert-meta">Expires Aug 1, 2028</p>
+      </div>
+      <div class="cert-card">
+        <span class="cert-issuer aws">AWS</span>
+        <h3>AWS Cloud Quest: Cloud Practitioner</h3>
+        <p class="cert-meta">Issued Sep 25, 2023</p>
+      </div>
+      <div class="cert-card">
+        <span class="cert-issuer aws">AWS</span>
+        <h3>AWS Knowledge: Cloud Essentials</h3>
+        <p class="cert-meta">Issued Sep 22, 2023</p>
+      </div>
+      <div class="cert-card">
+        <span class="cert-issuer aws">AWS</span>
+        <h3>AWS Partner: Cloud Economics Essentials</h3>
+        <p class="cert-meta">Issued Aug 7, 2025</p>
+      </div>
+      <div class="cert-card">
+        <span class="cert-issuer aws">AWS</span>
+        <h3>AWS Partner: Sales Accredited</h3>
+        <p class="cert-meta">Issued Aug 7, 2025</p>
+      </div>
+      <div class="cert-card">
+        <span class="cert-issuer aws">AWS</span>
+        <h3>AWS Partner: Technical Accredited</h3>
+        <p class="cert-meta">Issued Aug 7, 2025</p>
+      </div>
+      <div class="cert-card">
+        <span class="cert-issuer datadog">Datadog</span>
+        <h3>Cloud Security Engineer Learning Path</h3>
+        <p class="cert-meta">Issued Jun 27, 2025</p>
+      </div>
+      <div class="cert-card">
+        <span class="cert-issuer fortinet">Fortinet</span>
+        <h3>Fortinet Certified Associate — Cybersecurity</h3>
+        <p class="cert-meta">Expires Jul 12, 2026</p>
+      </div>
+      <div class="cert-card">
+        <span class="cert-issuer fortinet">Fortinet</span>
+        <h3>FortiGate 7.4 Operator (NSE)</h3>
+        <p class="cert-meta">Fortinet NSE Exam</p>
+      </div>
+      <div class="cert-card">
+        <span class="cert-issuer fortinet">Fortinet</span>
+        <h3>Introduction to the Threat Landscape</h3>
+        <p class="cert-meta">Fortinet NSE Exam</p>
+      </div>
+      <div class="cert-card">
+        <span class="cert-issuer cisco">Cisco</span>
+        <h3>Networking Basics</h3>
+        <p class="cert-meta">Cisco Networking Academy</p>
+      </div>
+    </div>
+    <a class="btn btn-ghost" style="margin-top:24px;" href="https://www.credly.com/users/earl-jay-vincent-onipa" target="_blank" rel="noopener">View all badges on Credly →</a>
+  </section>
+
 
   <!-- BUSINESS -->
   <section id="business">
