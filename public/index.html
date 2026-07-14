@@ -199,7 +199,9 @@
   .contact-grid{display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:32px; margin-bottom:48px;}
   .contact-links{display:flex; gap:16px; flex-wrap:wrap;}
   .foot-bottom{font-family:var(--mono); font-size:11.5px; color:var(--text-low); display:flex; justify-content:space-between; border-top:1px solid var(--line-soft); padding-top:24px; flex-wrap:wrap; gap:10px;}
-
+    .visit-counter{display:flex; align-items:center; gap:6px;}
+  .visit-counter .dot{border-radius:50%; background:var(--green); box-shadow:0 0 6px var(--green); display:inline-block;}
+  .visit-counter #visitCount{color:var(--cyan); font-weight:600;}
   @media (max-width:860px){
     .hero-grid{grid-template-columns:1fr;}
     .about-grid{grid-template-columns:1fr;}
@@ -514,6 +516,7 @@
   </div>
   <div class="foot-bottom">
     <span>© <span id="year"></span> Earl Onipa · Cagayan de Oro City, Philippines</span>
+    <span class="visit-counter"><span class="dot" style="width:5px;height:5px;"></span> <span id="visitCount">—</span> unique visits</span>
     <span>Built with a bias toward uptime.</span>
   </div>
 </footer>
