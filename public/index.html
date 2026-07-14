@@ -524,6 +524,18 @@
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
 
+ // Unique visit counter (server-side, cookie-deduped)
+  fetch('/api/visits')
+    .then(res => res.json())
+    .then(data => {
+      const el = document.getElementById('visitCount');
+      if (el) el.textContent = data.count.toLocaleString();
+    })
+    .catch(() => {
+      const el = document.getElementById('visitCount');
+      if (el) el.textContent = '—';
+    });
+
   // Port panel: 24 ports, staggered "link negotiation" animation, then idle random activity blips
   const grid = document.getElementById('portGrid');
   const total = 24;
